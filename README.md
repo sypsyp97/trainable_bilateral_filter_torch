@@ -29,9 +29,7 @@ cd trainable_bilateral_filter_torch
 pip install torch numpy matplotlib scikit-image loguru tqdm
 ```
 
-## Usage
-
-### Basic Usage
+## Basic Usage
 
 ```python
 import torch
