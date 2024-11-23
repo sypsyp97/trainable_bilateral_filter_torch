@@ -250,6 +250,11 @@ class BilateralFilter(nn.Module):
                 logger.debug(f"Processing 3D input with shape: {x.shape}")
                 
                 # Handle each depth slice separately
+                # TODO: Implement true 3D filtering using 3D kernels instead of slice-by-slice processing
+                #       This would involve:
+                #       1. Using 3D spatial kernels with sigma_sz for z-dimension
+                #       2. 3D patch extraction with proper padding in all dimensions
+                #       3. Full 3D convolution for better preservation of volumetric features
                 output_slices = []
                 for d in range(depth):
                     slice_2d = x[:, :, d:d+1, :, :]

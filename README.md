@@ -9,10 +9,17 @@ A pure PyTorch implementation of trainable bilateral filter for image denoising,
 
 ## Additional Features compare to the official implementation
 
-- Flexible processing of 2D and 3D images
+- Flexible processing of 2D and 3D images (currently slice-by-slice for 3D)
 - Support for both grayscale and RGB images
 - Cached kernel computations for improved performance
 - Multi-stage denoising pipeline
+
+## Future Improvements
+
+- [ ] Implement true 3D filtering with volumetric kernels
+  - Full 3D spatial kernels using z-dimension sigma
+  - 3D patch extraction with proper padding
+  - Volumetric convolution for better feature preservation
 
 ## Installation
 
